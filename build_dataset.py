@@ -12,11 +12,6 @@ SIZE = 64
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_dir',default='../maizedataset/' , help="Directory with the maize dataset")
 #arser.add_argument('--output_dir',default='mzdata', help="Where to write the new data" )
-
-def resize_and_save(filename, output_dir, size=SIZE):
-        image = Image.open(filename)
-        image = image.resize((size,size),Image.BILINEAR)
-        image.save(os.path.join(output_dir,filename.split('/')[-1]))
     
     
 if __name__ == '__main__':
